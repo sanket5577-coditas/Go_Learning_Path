@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // task 1 :- create the Person class using a struct in Go to represent individuals with attributes like name, age, and methods to introduce themselves, update their age, and check if they are eligible to vote.
-func main() {
+func _() {
 	Sanket := Person{Name: "Sanket", Age: 17, Gender: "Male"}
 	fmt.Println(Sanket.ShowDetails()) // details before updating age
 	fmt.Println(Sanket.UpdateAge(22)) // The Age Has Been Updated :22

@@ -30,7 +30,7 @@ func (r retailStore) describe(){
 
 type InventoryManagement interface {
 	adding()
-	updating()
+	updating() 
 	describe()
 	reports()
 }

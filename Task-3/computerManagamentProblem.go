@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func n() {
 	ramkidukan := store{10, 2, 3}
 	show(ramkidukan)
 }

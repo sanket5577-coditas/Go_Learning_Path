@@ -10,25 +10,17 @@ func main() {
 	fmt.Println("Welcome to files in Go")
 
 	content := "This needs to go in a file - MrSanketKumar"
-	filename := "./myfile.txt"
 
-	// Check if the file already exists
-	if _, err := os.Stat(filename); os.IsNotExist(err) {
-		// File doesn't exist, so create it
-		file, err := os.Create(filename)
-		checkNilErr(err)
-		defer file.Close()
+	file, err := os.Create("./myfile.txt")
+	checkNilErr(err)
 
-		// Write content to the file
-		length, err := io.WriteString(file, content)
-		checkNilErr(err)
-		fmt.Println("Length is ", length)
-	} else {
-		fmt.Println("File already exists")
-	}
+	length, err := io.WriteString(file, content)
 
-	// Read the file
-	readFile(filename)
+	checkNilErr(err)
+
+	fmt.Println("Length is ", length)
+	defer file.Close()
+	readFile("./myfile.txt")
 }
 
 func readFile(filename string) {
